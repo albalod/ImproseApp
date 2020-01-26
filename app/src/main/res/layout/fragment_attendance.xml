@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/attendance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/attendance_title"
+        android:textStyle="bold"
+        android:textColor="@color/dark_text"
+        android:textSize="40sp"/>
+    <TextView
+        android:id="@+id/attendance_date_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/attendance_title"
+        android:text="@string/attendance_date_help"
+        android:textColor="@color/dark_text"
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/attendance_date_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5sp"
+        android:layout_below="@id/attendance_date_help"
+        android:textSize="25sp"
+        android:hint="@string/attendance_date_hint"
+        android:inputType="date"/>
+
+    <TextView
+        android:id="@+id/attendance_name_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/attendance_date_edittext"
+        android:layout_marginTop="50dp"
+        android:text="@string/attendance_name_help"
+        android:textColor="@color/dark_text"
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/attendance_name_edittext"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/attendance_name_help"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:hint="Name Here"
+        android:textAlignment="center"/>
+    <Button
+        android:id="@+id/attendance_button"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/attendance_name_edittext"
+        android:layout_marginTop="40dp"
+        android:text="@string/attendance_button"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/school_color"
+        android:textSize="20sp"/>
+
+
+</RelativeLayout>

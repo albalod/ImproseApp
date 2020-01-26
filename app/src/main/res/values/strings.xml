@@ -25,6 +25,11 @@
         \nInstitute of Technology Improse App.
         \nClick the Menu Bar in the corner
         \nto get started.</string>
+    <string name="attendance_title">Attendence</string>
+    <string name="attendance_date_help">Insert the date of the meeting below:</string>
+    <string name="attendance_date_hint">MM/DD/YYYY</string>
+    <string name="attendance_name_help">Insert the name of the attendee:</string>
+    <string name="attendance_button">Add</string>
 
 
 </resources>

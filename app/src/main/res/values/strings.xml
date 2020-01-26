@@ -19,6 +19,12 @@
     <string name="login">Login</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="sample">SampleText</string>
+    <string name="LoginActivity">LoginActivity</string>
+    <string name="text_welcome">Welcome to the Rose-Hulman
+        \nInstitute of Technology Improse App.
+        \nClick the Menu Bar in the corner
+        \nto get started.</string>
 
 
 </resources>

@@ -25,6 +25,9 @@
         \nInstitute of Technology Improse App.
         \nClick the Menu Bar in the corner
         \nto get started.</string>
+    <string name="meeting_records">Meeting Records</string>
+    <string name="games_list">Games List</string>
+    <string name="view_stats">View Stats</string>
 
 
 </resources>

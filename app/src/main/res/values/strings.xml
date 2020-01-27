@@ -34,6 +34,8 @@
     <string name="members_c_present">Present Members:\n%s</string>
     <string name="meeting_c_games">Games Played:\n%s</string>
     <string name="back_button">Back</string>
+    <string name="game_c_title">%s</string>
+    <string name="game_c_description">Description:\n%s</string>
 
 
 </resources>

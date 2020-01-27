@@ -30,6 +30,10 @@
     <string name="attendance_date_hint">MM/DD/YYYY</string>
     <string name="attendance_name_help">Insert the name of the attendee:</string>
     <string name="attendance_button">Add</string>
+    <string name="meeting_c_title">Meeting %s</string>
+    <string name="members_c_present">Present Members:\n%s</string>
+    <string name="meeting_c_games">Games Played:\n%s</string>
+    <string name="back_button">Back</string>
 
 
 </resources>

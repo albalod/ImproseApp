@@ -7,21 +7,20 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import java.util.zip.Inflater
 
-class HomeFragment : Fragment(){
+class MeetingFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val home_view = inflater.inflate(R.layout.fragment_home, container,false)
+        val meeting_view = inflater.inflate(R.layout.fragment_meeting_records, container,false)
 
         //child fragment
         val childFragMan = getChildFragmentManager();
         val childFragTrans = childFragMan.beginTransaction();
         val fragB =  DataFragment();
-        childFragTrans.add(R.id.home_data, fragB);
+        childFragTrans.add(R.id.meeting_data, fragB);
         childFragTrans.addToBackStack("GameData");
         childFragTrans.commit();
-
-        return home_view
+        return meeting_view
     }
 
 }

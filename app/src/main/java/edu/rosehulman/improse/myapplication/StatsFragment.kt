@@ -11,7 +11,18 @@ class StatsFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        return inflater.inflate(R.layout.fragment_statistics, container,false)
+        val stats_view = inflater.inflate(R.layout.fragment_statistics, container,false)
+
+        //child fragment
+        val childFragMan = getChildFragmentManager();
+        val childFragTrans = childFragMan.beginTransaction();
+        val fragB =  DataFragment();
+        childFragTrans.add(R.id.stats_data, fragB);
+        childFragTrans.addToBackStack("GameData");
+        childFragTrans.commit();
+
+        return stats_view;
+
     }
 
 }

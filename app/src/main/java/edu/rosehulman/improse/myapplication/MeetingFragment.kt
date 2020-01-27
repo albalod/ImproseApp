@@ -11,7 +11,16 @@ class MeetingFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        return inflater.inflate(R.layout.fragment_meeting_records, container,false)
+        val meeting_view = inflater.inflate(R.layout.fragment_meeting_records, container,false)
+
+        //child fragment
+        val childFragMan = getChildFragmentManager();
+        val childFragTrans = childFragMan.beginTransaction();
+        val fragB =  DataFragment();
+        childFragTrans.add(R.id.meeting_data, fragB);
+        childFragTrans.addToBackStack("GameData");
+        childFragTrans.commit();
+        return meeting_view
     }
 
 }

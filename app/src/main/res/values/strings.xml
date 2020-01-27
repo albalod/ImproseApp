@@ -29,6 +29,7 @@
     <string name="games_list">Games List</string>
     <string name="view_stats">View Stats</string>
     <string name="sample_user">SampleUser</string>
+    <string name="text_upcoming">Upcoming Events</string>
 
 
 </resources>

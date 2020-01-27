@@ -36,6 +36,12 @@
     <string name="back_button">Back</string>
     <string name="game_c_title">%s</string>
     <string name="game_c_description">Description:\n%s</string>
+    <string name="placeholder">Dummy</string>
+    <string name="stats_c_position">Position: %s</string>
+    <string name="stats_c_activeness">Active?: %s</string>
+    <string name="stats_c_meetings">Meetings been to: %d</string>
+    <string name="stats_c_seen">Last seen: %s</string>
+    <string name="stats_c_mostplayed">Most played game: %s</string>
 
 
 </resources>

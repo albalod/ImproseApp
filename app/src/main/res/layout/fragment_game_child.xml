@@ -10,7 +10,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/game_c_title"
+        android:text="@string/placeholder"
         android:textStyle="bold"
         android:textColor="@color/dark_text"
         android:textSize="40sp"/>

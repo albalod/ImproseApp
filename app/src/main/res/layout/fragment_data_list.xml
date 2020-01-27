@@ -9,6 +9,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     android:padding="8dp"
-    android:layout_margin="5dp">
+    android:layout_margin="5dp"
+    android:background="@color/slight_grey"
+    >
 
 </androidx.recyclerview.widget.RecyclerView>

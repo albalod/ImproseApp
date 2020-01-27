@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/stats_c_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/placeholder"
+        android:textStyle="bold"
+        android:textColor="@color/dark_text"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:id="@+id/stats_c_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stats_c_title"
+        android:text="@string/stats_c_position"
+        android:textSize="20sp"
+        android:textColor="@color/dark_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+    <TextView
+        android:id="@+id/stats_c_activeness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stats_c_position"
+        android:text="@string/stats_c_activeness"
+        android:textSize="20sp"
+        android:textColor="@color/dark_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+    <TextView
+        android:id="@+id/stats_c_meetings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stats_c_activeness"
+        android:text="@string/stats_c_meetings"
+        android:textSize="20sp"
+        android:textColor="@color/dark_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+    <TextView
+        android:id="@+id/stats_c_seen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stats_c_meetings"
+        android:text="@string/stats_c_seen"
+        android:textSize="20sp"
+        android:textColor="@color/dark_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+    <TextView
+        android:id="@+id/stats_c_mostplayed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stats_c_seen"
+        android:text="@string/stats_c_mostplayed"
+        android:textSize="20sp"
+        android:textColor="@color/dark_text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/back_button"
+        android:textSize="25sp"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        />
+
+</RelativeLayout>

@@ -25,6 +25,27 @@
         \nInstitute of Technology Improse App.
         \nClick the Menu Bar in the corner
         \nto get started.</string>
+    <string name="attendance_title">Attendence</string>
+    <string name="attendance_date_help">Insert the date of the meeting below:</string>
+    <string name="attendance_date_hint">MM/DD/YYYY</string>
+    <string name="attendance_name_help">Insert the name of the attendee:</string>
+    <string name="attendance_button">Add</string>
+    <string name="meeting_c_title">Meeting %s</string>
+    <string name="members_c_present">Present Members:\n%s</string>
+    <string name="meeting_c_games">Games Played:\n%s</string>
+    <string name="back_button">Back</string>
+    <string name="game_c_title">%s</string>
+    <string name="game_c_description">Description:\n%s</string>
+    <string name="placeholder">Dummy</string>
+    <string name="stats_c_position">Position: %s</string>
+    <string name="stats_c_activeness">Active?: %s</string>
+    <string name="stats_c_meetings">Meetings been to: %d</string>
+    <string name="stats_c_seen">Last seen: %s</string>
+    <string name="stats_c_mostplayed">Most played game: %s</string>
+    <string name="suggestions_help">Got an idea for a game we can play?\nTell us here!</string>
+    <string name="suggestions_title">Suggestions</string>
+    <string name="suggestions_hint">Write Suggestion here ...</string>
+    <string name="suggestions_submit">Submit</string>
 
 
 </resources>

@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import java.util.zip.Inflater
 
-class HomeFragment : Fragment(){
+class HomeFragment : HasChildFragment(){
+    override fun switchToChildFragment(pos: Int) {
+
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -16,7 +19,7 @@ class HomeFragment : Fragment(){
         //child fragment
         val childFragMan = getChildFragmentManager();
         val childFragTrans = childFragMan.beginTransaction();
-        val fragB =  DataFragment();
+        val fragB =  DataFragment("Home", this, ArrayList<String>());
         childFragTrans.add(R.id.home_data, fragB);
         childFragTrans.addToBackStack("GameData");
         childFragTrans.commit();

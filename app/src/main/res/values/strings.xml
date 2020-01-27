@@ -53,6 +53,10 @@
     <string name="suggestions_hint">Write Suggestion here ...</string>
     <string name="suggestions_submit">Submit</string>
 
+    <string name="yee_haw">Yee-Haw</string>
+    <string name="yee_haw_description">Description: Yee-Haw begins with all members in a circle. The leader begins by yelling “Yee-haw” and swinging their left or right. From there, the person can choose to keep the Yee-Haw going or “Hey Barn”, which reverses the direction of play.
+    </string>
+
 
 
 </resources>

@@ -42,37 +42,26 @@
         app:srcCompat="@drawable/improse_logo" />
 
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/slight_grey"
+        android:layout_centerHorizontal="true"
+        android:text="@string/rose_login_below"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:textSize="24sp"
+        android:id="@+id/login_text"
+        android:textColor="@color/dark_text"
+        android:layout_marginTop="30dp"
         android:layout_below="@id/logo_image"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginStart="50dp"
-        android:hint="@string/username"
-        android:id="@+id/username_field"
-        android:inputType="text"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/slight_grey"
-        android:layout_below="@id/username_field"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginStart="50dp"
-        android:hint="@string/password"
-        android:id="@+id/password_field"
-        android:inputType="textPassword"
+        android:gravity="center"
         />
 
     <Button
         android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password_field"
+        android:layout_below="@id/login_text"
         android:layout_marginTop="50dp"
         android:text="@string/login"
         android:layout_centerHorizontal="true"

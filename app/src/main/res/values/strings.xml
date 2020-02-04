@@ -56,6 +56,9 @@
     <string name="yee_haw">Yee-Haw</string>
     <string name="yee_haw_description">Description: Yee-Haw begins with all members in a circle. The leader begins by yelling “Yee-haw” and swinging their left or right. From there, the person can choose to keep the Yee-Haw going or “Hey Barn”, which reverses the direction of play.
     </string>
+    <string name="rose_login_below">Use the button below to login using your Rose-Hulman credentials</string>
+    <string name="reg_token">1b46204c-449e-43b9-984f-b019b474082d</string>
+
 
 
 

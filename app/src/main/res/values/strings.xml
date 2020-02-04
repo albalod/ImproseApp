@@ -14,7 +14,7 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
-    <string name="school">Rose-Hulman Institute of Technology</string>
+    <string name="school">Rose-\nHulman\nInstitute of\nTechnology</string>
     <string name="app_name_space">Improse App</string>
     <string name="login">Login</string>
     <string name="username">Username</string>

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import edu.rosehulman.albalod.photobucket.GamesAdapters
+import kotlinx.android.synthetic.main.fragment_view_games.view.*
 import java.util.zip.Inflater
 
 class DataFragment(val type: String, val parentF : HasChildFragment, val allData:ArrayList<String>): Fragment(){
@@ -23,9 +24,10 @@ class DataFragment(val type: String, val parentF : HasChildFragment, val allData
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        recyclerView = inflater.inflate(R.layout.fragment_data_list, container, false) as RecyclerView
+        //recyclerView = inflater.inflate(R.layout.fragment_data_list, container, false) as RecyclerView
 
         if(type.equals("Games")) {
+            recyclerView = view!!.game_recycler_view
             setAsGamesFragment()
         }
 

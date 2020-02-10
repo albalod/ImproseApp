@@ -1,16 +1,15 @@
-package edu.rosehulman.improse.myapplication
+package edu.rosehulman.improse.myapplication.Members
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import java.util.zip.Inflater
+import edu.rosehulman.improse.myapplication.MainActivity
+import edu.rosehulman.improse.myapplication.R
 
 class StatsFragment : Fragment(){
-     fun switchToChildFragment(pos: Int) {
 
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -19,8 +18,8 @@ class StatsFragment : Fragment(){
         //child fragment
         val childFragMan = getChildFragmentManager();
         val childFragTrans = childFragMan.beginTransaction();
-        //val fragB =  DataFragment("Stats", this, ArrayList<String>());
-       // childFragTrans.add(R.id.stats_data, fragB);
+        val fragS =  StatsDataFragment(this);
+        childFragTrans.add(R.id.stats_data, fragS);
         childFragTrans.addToBackStack("GameData");
         childFragTrans.commit();
 
@@ -28,4 +27,11 @@ class StatsFragment : Fragment(){
 
     }
 
+
+    fun switchToChildFragment(member: ImprovMember) {
+        val ft = (context as MainActivity).supportFragmentManager.beginTransaction()
+        ft.hide(parentFragment!!)
+        ft.replace(R.id.content_layout, StatsChildFragment.newInstance(member))
+        ft.commit()
+    }
 }

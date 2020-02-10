@@ -1,4 +1,4 @@
-package edu.rosehulman.improse.myapplication.ImprovGame
+package edu.rosehulman.improse.myapplication.Members
 
 import android.os.Bundle
 import android.util.Log
@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import edu.rosehulman.improse.myapplication.R
 
-class GameDataFragment(val parentF : GamesFragment): Fragment(){
+class StatsDataFragment(val parentF : StatsFragment): Fragment(){
 
-    private lateinit var adapter: GamesAdapters
+    private lateinit var adapter: StatsAdapters
     var recyclerView: RecyclerView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +22,7 @@ class GameDataFragment(val parentF : GamesFragment): Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         recyclerView = inflater.inflate(R.layout.fragment_data_list, container, false) as RecyclerView
 
-        adapter = GamesAdapters(context!!, parentF)
+        adapter = StatsAdapters(context!!, parentF)
         if(recyclerView != null) {
             recyclerView?.layoutManager = LinearLayoutManager(context)
             recyclerView?.setHasFixedSize(true)

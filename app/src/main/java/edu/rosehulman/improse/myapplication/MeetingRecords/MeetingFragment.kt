@@ -1,30 +1,30 @@
-package edu.rosehulman.improse.myapplication
+package edu.rosehulman.improse.myapplication.MeetingRecords
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import java.util.zip.Inflater
+import edu.rosehulman.improse.myapplication.R
 
-class HomeFragment : Fragment(){
-     fun switchToChildFragment(pos: Int) {
+class MeetingFragment : Fragment(){
 
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val home_view = inflater.inflate(R.layout.fragment_home, container,false)
+        val meeting_view = inflater.inflate(R.layout.fragment_meeting_records, container,false)
 
         //child fragment
         val childFragMan = getChildFragmentManager();
         val childFragTrans = childFragMan.beginTransaction();
-       // val fragB =  DataFragment("Home", this, ArrayList<String>());
-       // childFragTrans.add(R.id.home_data, fragB);
-        childFragTrans.addToBackStack("GameData");
+        val fragM =  MeetingDataFragment(this);
+        childFragTrans.add(R.id.meeting_data, fragM);
         childFragTrans.commit();
+        return meeting_view
+    }
 
-        return home_view
+    fun switchToChildFragment(meeting: ImprovMeeting) {
+
     }
 
 }

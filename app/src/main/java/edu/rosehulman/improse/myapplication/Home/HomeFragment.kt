@@ -1,33 +1,35 @@
-package edu.rosehulman.improse.myapplication.ImprovGame
+package edu.rosehulman.improse.myapplication.Home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import edu.rosehulman.improse.myapplication.ImprovGame.HomeDataFragment
 import edu.rosehulman.improse.myapplication.MainActivity
 import edu.rosehulman.improse.myapplication.R
 
-class GamesFragment : Fragment(){
+class HomeFragment : Fragment(){
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val games_view = inflater.inflate(R.layout.fragment_view_games, container,false)
 
+        val home_view = inflater.inflate(R.layout.fragment_home, container,false)
 
         //child fragment
         val childFragMan = getChildFragmentManager();
         val childFragTrans = childFragMan.beginTransaction();
-
-        val fragB = GameDataFragment(this);
-        childFragTrans.replace(R.id.games_data, fragB);
+        val fragA =  HomeDataFragment(this);
+        childFragTrans.add(R.id.home_data, fragA);
+       // childFragTrans.addToBackStack("GameData");
         childFragTrans.commit();
-        return games_view;
+        return home_view
     }
 
-      fun switchToChildFragment(game: ImprovGame){
+    fun switchToChildFragment(event: ImprovEvent) {
         val ft = (context as MainActivity).supportFragmentManager.beginTransaction()
         ft.hide(parentFragment!!)
-        ft.replace(R.id.content_layout, GamesChildFragment.newInstance(game))
+        ft.replace(R.id.content_layout, HomeChildFragment.newInstance(event))
         ft.commit()
     }
 

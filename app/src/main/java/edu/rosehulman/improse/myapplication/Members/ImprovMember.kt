@@ -1,4 +1,4 @@
-package edu.rosehulman.improse.myapplication.ImprovGame
+package edu.rosehulman.improse.myapplication.Members
 
 import android.os.Parcelable
 import com.google.firebase.Timestamp
@@ -9,22 +9,22 @@ import kotlinx.android.parcel.IgnoredOnParcel
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class ImprovGame(
+class ImprovMember(
     val name:String = "",
     val description:String = "",
     var timesPlayed:Int= 0,
     var rating:Double = 0.0)
-    :Parcelable{
+    : Parcelable {
     @IgnoredOnParcel @get:Exclude var id = ""
     @IgnoredOnParcel @ServerTimestamp var lastTouched: Timestamp? = null
 
     companion object {
         const val LAST_TOUCHED_KEY = "lastTouched"
 
-        fun fromSnapshot(snapshot: DocumentSnapshot): ImprovGame {
-            val improvGame = snapshot.toObject(ImprovGame::class.java)!!
-            improvGame.id = snapshot.id
-            return improvGame
+        fun fromSnapshot(snapshot: DocumentSnapshot): ImprovMember {
+            val improvMember = snapshot.toObject(ImprovMember::class.java)!!
+            improvMember.id = snapshot.id
+            return improvMember
         }
     }
 }

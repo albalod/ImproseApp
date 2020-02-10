@@ -1,4 +1,4 @@
-package edu.rosehulman.improse.myapplication.ImprovGame
+package edu.rosehulman.improse.myapplication.Members
 
 import android.content.Context
 import android.util.Log
@@ -12,22 +12,22 @@ import edu.rosehulman.improse.myapplication.ImprovGame.GamesFragment
 import edu.rosehulman.improse.myapplication.ImprovGame.ImprovGame
 import edu.rosehulman.improse.myapplication.R
 
-class GamesAdapters(val con : Context, val gf: GamesFragment): RecyclerView.Adapter<GameDataViewHolder>() {
+class StatsAdapters(val con : Context, val sf: StatsFragment): RecyclerView.Adapter<StatsDataViewHolder>() {
 
-    var allGames = ArrayList<ImprovGame>()
+    var allMembers = ArrayList<ImprovMember>()
 
-    private val gamesRef = FirebaseFirestore
+    private val memRef = FirebaseFirestore
         .getInstance()
-        .collection(Constants.GAME_REF)
+        .collection(Constants.MEMBERS)
 
     private lateinit var listenerRegistration: ListenerRegistration
 
-     fun addSnapshotListener() {
-        listenerRegistration = gamesRef
-            .orderBy(ImprovGame.LAST_TOUCHED_KEY, Query.Direction.ASCENDING)
+    fun addSnapshotListener() {
+        listenerRegistration = memRef
+            .orderBy(ImprovMember.LAST_TOUCHED_KEY, Query.Direction.ASCENDING)
             .addSnapshotListener { querySnapshot, e ->
                 if (e != null) {
-                    Log.d(Constants.GAME_REF, "listen error", e)
+                    Log.d(Constants.MEMBERS, "listen error", e)
                 } else {
                     processSnapshotChanges(querySnapshot!!)
                 }
@@ -38,23 +38,23 @@ class GamesAdapters(val con : Context, val gf: GamesFragment): RecyclerView.Adap
         // Snapshots has documents and documentChanges which are flagged by type,
         // so we can handle C,U,D differently.
         for (documentChange in querySnapshot.documentChanges) {
-            val improvGame = ImprovGame.fromSnapshot(documentChange.document)
+            val improvMember = ImprovMember.fromSnapshot(documentChange.document)
             when (documentChange.type) {
                 DocumentChange.Type.ADDED -> {
-                    Log.d(Constants.GAME_REF, "Adding $improvGame")
-                    allGames.add(0, improvGame)
+                    Log.d(Constants.MEMBERS, "Adding $improvMember")
+                    allMembers.add(0, improvMember)
                     notifyItemInserted(0)
                 }
                 DocumentChange.Type.REMOVED -> {
-                    Log.d(Constants.GAME_REF, "Removing $improvGame")
-                    val index = allGames.indexOfFirst { it.id == improvGame.id }
-                    allGames.removeAt(index)
+                    Log.d(Constants.MEMBERS, "Removing $improvMember")
+                    val index = allMembers.indexOfFirst { it.id == improvMember.id }
+                    allMembers.removeAt(index)
                     notifyItemRemoved(index)
                 }
                 DocumentChange.Type.MODIFIED -> {
-                    Log.d(Constants.GAME_REF, "Modifying $improvGame")
-                    val index = allGames.indexOfFirst { it.id == improvGame.id }
-                    allGames[index] = improvGame
+                    Log.d(Constants.MEMBERS, "Modifying $improvMember")
+                    val index = allMembers.indexOfFirst { it.id == improvMember.id }
+                    allMembers[index] = improvMember
                     notifyItemChanged(index)
                 }
             }
@@ -62,28 +62,28 @@ class GamesAdapters(val con : Context, val gf: GamesFragment): RecyclerView.Adap
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, index: Int): GameDataViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, index: Int): StatsDataViewHolder {
         val view = LayoutInflater.from(con).inflate(R.layout.data_card, parent, false)
-        return GameDataViewHolder(
+        return StatsDataViewHolder(
             view,
             this
         )
     }
 
     override fun getItemCount():Int {
-        return allGames.size
+        return allMembers.size
     }
 
-     fun switchToChildFragment(pos: Int) {
-        gf.switchToChildFragment(allGames[pos])
+    fun switchToChildFragment(pos: Int) {
+        sf.switchToChildFragment(allMembers[pos])
     }
 
-    fun add(game: ImprovGame){
-        gamesRef.add(game)
+    fun add(member: ImprovMember){
+        memRef.add(member)
     }
 
-    override fun onBindViewHolder(holder: GameDataViewHolder, position: Int) {
-        holder.bind(allGames[position].name)
+    override fun onBindViewHolder(holder: StatsDataViewHolder, position: Int) {
+        holder.bind(allMembers[position].name)
     }
 
 }

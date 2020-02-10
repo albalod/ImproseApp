@@ -1,10 +1,10 @@
 package edu.rosehulman.improse.myapplication.Attendance
 
+import android.os.Parcelable
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.Exclude
 import com.google.firebase.firestore.ServerTimestamp
-import edu.rosehulman.improse.myapplication.Data
 import edu.rosehulman.improse.myapplication.ImprovGame.ImprovGame
 import kotlinx.android.parcel.IgnoredOnParcel
 import kotlinx.android.parcel.Parcelize
@@ -13,7 +13,7 @@ import kotlinx.android.parcel.Parcelize
 class MeetingData(
     val dateString: String = "",
     val attendees: ArrayList<String> = ArrayList()
-) : Data {
+) : Parcelable {
     @IgnoredOnParcel @get:Exclude var id = ""
     @IgnoredOnParcel @ServerTimestamp var lastTouched: Timestamp? = null
 

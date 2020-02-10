@@ -63,6 +63,7 @@
     <string name="type">Event Type: %1$s</string>
     <string name="suggestion_submitted">Suggestion Submitted! Thanks!</string>
     <string name="suggestion_denied">Suggestions should not be empty</string>
-
+    <string name="bad_date_error">Date formatting is incorrect</string>
+    <string name="already_attending_error">Attendee already noted</string>
 
 </resources>

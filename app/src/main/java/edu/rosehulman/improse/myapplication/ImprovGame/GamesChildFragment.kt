@@ -1,3 +1,5 @@
+package edu.rosehulman.improse.myapplication
+
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import edu.rosehulman.improse.myapplication.ImprovGame.ImprovGame
-import edu.rosehulman.improse.myapplication.R
 import kotlinx.android.synthetic.main.fragment_game_child.view.*
 
 const val ARG_GAME = "Game"
@@ -30,7 +31,6 @@ class GamesChildFragment : Fragment() {
         }
     }
 
-    @SuppressLint("RestrictedApi")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -49,9 +49,9 @@ class GamesChildFragment : Fragment() {
             Log.d("wrong", "something went wrong")
         }
 
-        val backButton: Button = view.game_child_back
-        backButton.setOnClickListener{
-            Log.d("Back", "Calling back")
+        //val backButton: Button = view.game_child_back
+       // backButton.setOnClickListener{
+           // Log.d("Back", "Calling back")
            /* val ft = parentFragment?.fragmentManager?.beginTransaction()
             ft?.remove(this)
             val gf = GamesFragment()
@@ -61,7 +61,7 @@ class GamesChildFragment : Fragment() {
             ft?.commit()*/
            //onDestroyView()
 
-        }
+       // }
 
         return view;
     }

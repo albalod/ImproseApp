@@ -4,7 +4,7 @@ object Constants {
 
     const val GAME_REF = "ImprovGames"
     const val MEMBERS = "Members"
-    const val MEETING = ""
+    const val EVENTS = "Events"
 
 
 

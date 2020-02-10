@@ -59,6 +59,8 @@
     <string name="rose_login_below">Use the button below to login using your Rose-Hulman credentials</string>
     <string name="reg_token">1b46204c-449e-43b9-984f-b019b474082d</string>
     <string name="logout">Log Out</string>
+    <string name="bad_date_error">Date formatting is incorrect</string>
+    <string name="already_attending_error">Attendee already noted</string>
 
 
 </resources>

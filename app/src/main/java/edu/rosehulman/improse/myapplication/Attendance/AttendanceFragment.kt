@@ -79,7 +79,7 @@ class AttendanceFragment : Fragment() {
 
         //TODO: do some actual data validation here
         if (isInputDateBad(inputDate)) {
-            Toast.makeText(context, "Date formatting is incorrect", Toast.LENGTH_LONG)
+            Toast.makeText(context, R.string.bad_date_error, Toast.LENGTH_LONG).show()
             return
         }
 
@@ -91,7 +91,7 @@ class AttendanceFragment : Fragment() {
             attendanceRef.add(MeetingData(inputDate, attender))
         } else {
             if (meetings[index].attendees.contains(inputName)) {
-                Toast.makeText(context, "Attendee already noted", Toast.LENGTH_LONG)
+                Toast.makeText(context, R.string.already_attending_error, Toast.LENGTH_LONG).show()
                 attendance_name_edittext.text.clear()
                 return
             }

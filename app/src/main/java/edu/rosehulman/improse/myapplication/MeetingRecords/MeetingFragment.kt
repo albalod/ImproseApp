@@ -1,16 +1,14 @@
-package edu.rosehulman.improse.myapplication
+package edu.rosehulman.improse.myapplication.MeetingRecords
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import java.util.zip.Inflater
+import edu.rosehulman.improse.myapplication.R
 
 class MeetingFragment : Fragment(){
-     fun switchToChildFragment(pos: Int) {
 
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -19,11 +17,14 @@ class MeetingFragment : Fragment(){
         //child fragment
         val childFragMan = getChildFragmentManager();
         val childFragTrans = childFragMan.beginTransaction();
-      //  val fragB =  DataFragment("Meeting", this, ArrayList<String>());
-        //childFragTrans.add(R.id.meeting_data, fragB);
-        childFragTrans.addToBackStack("GameData");
+        val fragM =  MeetingDataFragment(this);
+        childFragTrans.add(R.id.meeting_data, fragM);
         childFragTrans.commit();
         return meeting_view
+    }
+
+    fun switchToChildFragment(meeting: ImprovMeeting) {
+
     }
 
 }

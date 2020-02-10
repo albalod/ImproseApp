@@ -28,6 +28,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         />
+
     <EditText
         android:id="@+id/suggestions_edittext"
         android:layout_width="match_parent"

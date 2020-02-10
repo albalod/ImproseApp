@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import edu.rosehulman.improse.myapplication.GamesChildFragment
 import edu.rosehulman.improse.myapplication.MainActivity
 import edu.rosehulman.improse.myapplication.R
 
@@ -26,7 +25,6 @@ class GamesFragment : Fragment(){
     }
 
       fun switchToChildFragment(game: ImprovGame){
-
         val ft = (context as MainActivity).supportFragmentManager.beginTransaction()
         ft.hide(parentFragment!!)
         ft.replace(R.id.content_layout, GamesChildFragment.newInstance(game))

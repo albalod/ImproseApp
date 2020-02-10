@@ -1,4 +1,4 @@
-package edu.rosehulman.improse.myapplication
+package edu.rosehulman.improse.myapplication.ImprovGame
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import edu.rosehulman.improse.myapplication.ImprovGame.ImprovGame
+import edu.rosehulman.improse.myapplication.R
 import kotlinx.android.synthetic.main.fragment_game_child.view.*
 
 const val ARG_GAME = "Game"

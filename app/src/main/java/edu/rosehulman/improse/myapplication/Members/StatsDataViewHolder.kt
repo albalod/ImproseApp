@@ -1,4 +1,4 @@
-package edu.rosehulman.improse.myapplication.ImprovGame
+package edu.rosehulman.improse.myapplication.Members
 
 import android.util.Log
 import android.view.View
@@ -6,13 +6,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import edu.rosehulman.improse.myapplication.R
 
-class GameDataViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+class StatsDataViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
     val captionText: TextView = itemView.findViewById(R.id.data_text)
 
-    lateinit var childAdapter : GamesAdapters
+    lateinit var childAdapter : StatsAdapters
 
-    constructor(itemView:View, adapter: GamesAdapters): this(itemView){
+    constructor(itemView: View, adapter: StatsAdapters): this(itemView){
         this.childAdapter = adapter
 
         itemView.setOnClickListener{

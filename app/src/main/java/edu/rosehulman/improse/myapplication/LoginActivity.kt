@@ -49,7 +49,7 @@ class LoginActivity: AppCompatActivity() {
             initializeAuthListener()
         }
         else{
-            auth.signOut()
+          //  auth.signOut()
             initializeAuthListener()
         }
     }

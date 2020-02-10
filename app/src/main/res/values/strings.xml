@@ -31,7 +31,7 @@
     <string name="view_stats">View Stats</string>
     <string name="sample_user">SampleUser</string>
     <string name="text_upcoming">Upcoming Events</string>
-    <string name="attendance_title">Attendence</string>
+    <string name="attendance_title">Attendance</string>
     <string name="attendance_date_help">Insert the date of the meeting below:</string>
     <string name="attendance_date_hint">MM/DD/YYYY</string>
     <string name="attendance_name_help">Insert the name of the attendee:</string>

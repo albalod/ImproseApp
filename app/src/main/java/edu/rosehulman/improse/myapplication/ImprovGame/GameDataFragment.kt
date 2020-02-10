@@ -1,21 +1,19 @@
-package edu.rosehulman.improse.myapplication
+package edu.rosehulman.improse.myapplication.ImprovGame
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import edu.rosehulman.albalod.photobucket.GamesAdapters
-import java.util.zip.Inflater
+import edu.rosehulman.improse.myapplication.R
 
-class DataFragment(val type: String, val parentF : HasChildFragment, val allData:ArrayList<String>): Fragment(){
+class GameDataFragment(val parentF : GamesFragment): Fragment(){
 
-    private lateinit var adapter: ChildFragmentAdapter
+    private lateinit var adapter: GamesAdapters
     var recyclerView: RecyclerView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,32 +23,20 @@ class DataFragment(val type: String, val parentF : HasChildFragment, val allData
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         recyclerView = inflater.inflate(R.layout.fragment_data_list, container, false) as RecyclerView
 
-        if(type.equals("Games")) {
-            setAsGamesFragment()
-        }
-
-        return recyclerView
-    }
-
-    fun setAsGamesFragment(){
         adapter = GamesAdapters(context!!, parentF)
         if(recyclerView != null) {
             recyclerView?.layoutManager = LinearLayoutManager(context)
             recyclerView?.setHasFixedSize(true)
             recyclerView?.adapter = adapter
-            allData.forEach{
-                adapter.add(it)
-                Log.d("Adapter", it)
-            }
-
+            adapter.addSnapshotListener()
             Log.d("Adapter", "Adapter was set")
+
+            //adapter.add(ImprovGame(getString(R.string.yee_haw), getString(R.string.yee_haw_description), 0, 0.0))
         }
         else{
             Log.d("Adapter", "Adapter was not set")
         }
+        return recyclerView
     }
-
-
-
 
 }

@@ -6,14 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import edu.rosehulman.improse.myapplication.GamesFragment
-import edu.rosehulman.improse.myapplication.ImprovGame
+import edu.rosehulman.improse.myapplication.ImprovGame.ImprovGame
 import edu.rosehulman.improse.myapplication.R
 import kotlinx.android.synthetic.main.fragment_game_child.view.*
 
 const val ARG_GAME = "Game"
-
 class GamesChildFragment : Fragment() {
 
     var game: ImprovGame? = null
@@ -62,6 +59,7 @@ class GamesChildFragment : Fragment() {
             ft?.show(gf)
             //parentFragment?.fragmentManager?.popBackStack("GameParent", FragmentManager.POP_BACK_STACK_INCLUSIVE)
             ft?.commit()*/
+           //onDestroyView()
 
         }
 
@@ -70,7 +68,7 @@ class GamesChildFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(game:ImprovGame) =
+        fun newInstance(game: ImprovGame) =
             GamesChildFragment().apply {
                 arguments = Bundle().apply {
                     putParcelable(ARG_GAME, game)

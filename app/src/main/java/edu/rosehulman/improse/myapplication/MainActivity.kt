@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity(){
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -51,7 +52,6 @@ class MainActivity : AppCompatActivity(){
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-
 
             R.id.action_settings -> {
                 return true

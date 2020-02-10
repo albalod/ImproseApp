@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import java.util.zip.Inflater
 
-class HomeFragment : HasChildFragment(){
-    override fun switchToChildFragment(pos: Int) {
+class HomeFragment : Fragment(){
+     fun switchToChildFragment(pos: Int) {
 
     }
 
@@ -19,8 +19,8 @@ class HomeFragment : HasChildFragment(){
         //child fragment
         val childFragMan = getChildFragmentManager();
         val childFragTrans = childFragMan.beginTransaction();
-        val fragB =  DataFragment("Home", this, ArrayList<String>());
-        childFragTrans.add(R.id.home_data, fragB);
+       // val fragB =  DataFragment("Home", this, ArrayList<String>());
+       // childFragTrans.add(R.id.home_data, fragB);
         childFragTrans.addToBackStack("GameData");
         childFragTrans.commit();
 

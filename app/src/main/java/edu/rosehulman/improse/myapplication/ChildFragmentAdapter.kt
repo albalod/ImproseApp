@@ -11,7 +11,8 @@ abstract class ChildFragmentAdapter(): RecyclerView.Adapter<DataViewHolder>() {
         viewHolder.bind(allData[index])
     }
 
-    abstract fun add(data:String)
+    //abstract fun add(data:String)
+    abstract fun addSnapshotListener()
     abstract fun setBigData(data:ArrayList<Any>);
     abstract fun switchToChildFragment(pos:Int);
 

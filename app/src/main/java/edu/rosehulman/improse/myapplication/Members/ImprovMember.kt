@@ -11,8 +11,10 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 class ImprovMember(
     val name: String = "",
+    val username: String = "",
     val position: String = "",
-    var activeness: String = ""
+    var activeness: String = "",
+    val isAdmin: Boolean = false
 ) : Parcelable {
     @IgnoredOnParcel @get:Exclude var id = ""
     @IgnoredOnParcel @ServerTimestamp var lastTouched: Timestamp? = null

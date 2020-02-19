@@ -63,6 +63,7 @@ class LoginActivity: AppCompatActivity() {
     private fun switchToMainActivity(uid: String) {
         val intent = Intent(this, MainActivity::class.java)
             .putExtra(Constants.UID, uid)
+        Log.d(Constants.TAG, "Passing UserID to MainActivity: $uid")
         startActivity(intent)
     }
 

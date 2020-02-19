@@ -65,5 +65,11 @@
     <string name="suggestion_denied">Suggestions should not be empty</string>
     <string name="bad_date_error">Date formatting is incorrect</string>
     <string name="already_attending_error">Attendee already noted</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="bluetooth_hint">Write a message to send</string>
+    <string name="send">Send</string>
+    <string name="bluetooth_message">Received messages will show up here</string>
+    <string name="receive">Receive</string>
+    <string name="bluetooth_title">Connect</string>
 
 </resources>

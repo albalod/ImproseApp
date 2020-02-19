@@ -7,10 +7,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.*
 import edu.rosehulman.improse.myapplication.*
-import edu.rosehulman.improse.myapplication.Home.HomeFragment
-import edu.rosehulman.improse.myapplication.ImprovGame.GameDataViewHolder
-import edu.rosehulman.improse.myapplication.ImprovGame.GamesFragment
-import edu.rosehulman.improse.myapplication.ImprovGame.ImprovGame
 import edu.rosehulman.improse.myapplication.R
 
 class HomeAdapters(val con : Context, val hf: HomeFragment): RecyclerView.Adapter<HomeDataViewHolder>() {
@@ -77,10 +73,6 @@ class HomeAdapters(val con : Context, val hf: HomeFragment): RecyclerView.Adapte
 
     fun switchToChildFragment(pos: Int) {
         hf.switchToChildFragment(allEvents[pos])
-    }
-
-    fun add(game: ImprovGame){
-        eventsRef.add(game)
     }
 
     override fun onBindViewHolder(holder: HomeDataViewHolder, position: Int) {

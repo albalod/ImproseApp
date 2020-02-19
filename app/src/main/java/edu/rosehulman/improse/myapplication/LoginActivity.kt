@@ -49,7 +49,7 @@ class LoginActivity: AppCompatActivity() {
             initializeAuthListener()
         }
         else{
-          //  auth.signOut()
+            //auth.signOut()
             initializeAuthListener()
         }
     }
@@ -95,6 +95,8 @@ class LoginActivity: AppCompatActivity() {
     fun onRosefireLogin() {
         val signInIntent = Rosefire.getSignInIntent(this, getString(R.string.reg_token))
         startActivityForResult(signInIntent, ROSE_SIGN_IN)
+        
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

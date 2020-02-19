@@ -35,6 +35,11 @@
         android:icon="@drawable/ic_comment_black_24dp"
         android:title="@string/suggestions_title" />
 
+    <item
+        android:id="@+id/nav_connect"
+        android:icon="@drawable/ic_bluetooth_connected_black_24dp"
+        android:title="@string/bluetooth_title" />
+
 
 
 </menu>

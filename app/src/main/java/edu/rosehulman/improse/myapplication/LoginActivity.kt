@@ -1,29 +1,15 @@
 package edu.rosehulman.improse.myapplication
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ListenerRegistration
 import edu.rosehulman.rosefire.Rosefire
 import kotlinx.android.synthetic.main.login_activity.*
-import kotlinx.android.synthetic.main.login_activity.view.*
 
 class LoginActivity: AppCompatActivity() {
 
@@ -49,7 +35,7 @@ class LoginActivity: AppCompatActivity() {
             initializeAuthListener()
         }
         else{
-            //auth.signOut()
+            auth.signOut()
             initializeAuthListener()
         }
     }
@@ -76,6 +62,8 @@ class LoginActivity: AppCompatActivity() {
 
     private fun switchToMainActivity(uid: String) {
         val intent = Intent(this, MainActivity::class.java)
+            .putExtra(Constants.UID, uid)
+        Log.d(Constants.TAG, "Passing UserID to MainActivity: $uid")
         startActivity(intent)
     }
 

@@ -71,5 +71,6 @@
     <string name="bluetooth_message">Received messages will show up here</string>
     <string name="receive">Receive</string>
     <string name="bluetooth_title">Connect</string>
+    <string name="please_enter_your_name">Please enter your name</string>
 
 </resources>

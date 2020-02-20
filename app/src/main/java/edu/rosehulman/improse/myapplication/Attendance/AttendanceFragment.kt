@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import com.google.firebase.firestore.*
 import edu.rosehulman.improse.myapplication.Constants
 import edu.rosehulman.improse.myapplication.ImprovGame.ImprovGame
+import edu.rosehulman.improse.myapplication.MainActivity
+import edu.rosehulman.improse.myapplication.Members.ImprovMember
 import edu.rosehulman.improse.myapplication.R
 import kotlinx.android.synthetic.main.fragment_attendance.*
 import kotlinx.android.synthetic.main.fragment_attendance.view.*
@@ -22,6 +24,7 @@ class AttendanceFragment : Fragment() {
     private val attendanceRef = FirebaseFirestore
         .getInstance()
         .collection(Constants.MEETING)
+
 
     fun addSnapshotListener() {
         listenerRegistration = attendanceRef
@@ -77,7 +80,6 @@ class AttendanceFragment : Fragment() {
         val inputDate: String = attendance_date_edittext.text.toString()
         val inputName: String = attendance_name_edittext.text.toString()
 
-        //TODO: do some actual data validation here
         if (isInputDateBad(inputDate)) {
             Toast.makeText(context, R.string.bad_date_error, Toast.LENGTH_LONG).show()
             return
@@ -86,9 +88,7 @@ class AttendanceFragment : Fragment() {
         var index: Int = meetings.indexOfFirst { it.dateString == inputDate }
 
         if (index == -1) {
-            val attender = ArrayList<String>()
-            attender.add(inputName)
-            attendanceRef.add(MeetingData(inputDate, attender))
+            add(inputDate, inputName)
         } else {
             if (meetings[index].attendees.contains(inputName)) {
                 Toast.makeText(context, R.string.already_attending_error, Toast.LENGTH_LONG).show()
@@ -100,7 +100,17 @@ class AttendanceFragment : Fragment() {
             attendanceRef.document(meetings[index].id).set(meetings[index])
         }
         attendance_name_edittext.text.clear()
+    }
 
+    private fun add(date: String, name: String) {
+        val mainActivity = context as MainActivity
+        if (mainActivity.hasAdminCredentials()) {
+            val attender = ArrayList<String>()
+            attender.add(name)
+            attendanceRef.add(MeetingData(date, attender))
+        } else {
+            Toast.makeText(context, R.string.Not_admin, Toast.LENGTH_LONG).show()
+        }
 
     }
 

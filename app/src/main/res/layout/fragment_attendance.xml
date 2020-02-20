@@ -53,8 +53,8 @@
         android:layout_marginTop="5dp"
         android:layout_below="@id/attendance_name_help"
         android:layout_centerHorizontal="true"
-        android:textSize="25dp"
-        android:hint="Name Here"
+        android:textSize="25sp"
+        android:hint="@string/name_here"
         android:textAlignment="center"/>
     <Button
         android:id="@+id/attendance_button"

@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         .getInstance()
         .collection(Constants.MEMBERS)
     private lateinit var memberReg: Query
+    lateinit var currentMember: ImprovMember
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,7 +80,12 @@ class MainActivity : AppCompatActivity() {
                     }
                 }.create().show()
             }
+            currentMember = ImprovMember.fromSnapshot(it.documents[0])
         }
+    }
+
+    fun hasAdminCredentials(): Boolean {
+        return currentMember.isAdmin
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -72,5 +72,7 @@
     <string name="receive">Receive</string>
     <string name="bluetooth_title">Connect</string>
     <string name="please_enter_your_name">Please enter your name</string>
+    <string name="Not_admin">Please ask an officer or admin to do this for you</string>
+    <string name="name_here">Rose Username Here</string>
 
 </resources>

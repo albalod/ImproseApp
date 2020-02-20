@@ -36,7 +36,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="150dp"
         android:layout_below="@id/message_box"
         android:layout_marginTop="10dp"
         android:layout_marginStart="40dp"

@@ -104,13 +104,13 @@ class AttendanceFragment : Fragment() {
 
     private fun add(date: String, name: String) {
         val mainActivity = context as MainActivity
-        if (mainActivity.hasAdminCredentials()) {
+        //if (mainActivity.hasAdminCredentials()) {
             val attender = ArrayList<String>()
             attender.add(name)
             attendanceRef.add(MeetingData(date, attender))
-        } else {
-            Toast.makeText(context, R.string.Not_admin, Toast.LENGTH_LONG).show()
-        }
+//        } else {
+//            Toast.makeText(context, R.string.Not_admin, Toast.LENGTH_LONG).show()
+//        }
 
     }
 

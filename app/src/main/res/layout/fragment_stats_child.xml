@@ -50,7 +50,7 @@
         android:layout_marginRight="20dp"
         />
     <TextView
-        android:id="@+id/stats_c_seen"
+        android:id="@+id/stats_c_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/stats_c_meetings"
@@ -60,17 +60,17 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         />
-    <TextView
-        android:id="@+id/stats_c_mostplayed"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/stats_c_seen"
-        android:text="@string/stats_c_mostplayed"
-        android:textSize="20sp"
-        android:textColor="@color/dark_text"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        />
+<!--    <TextView-->
+<!--        android:id="@+id/stats_c_mostplayed"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/stats_c_seen"-->
+<!--        android:text="@string/stats_c_mostplayed"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textColor="@color/dark_text"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        />-->
 
 <!--    <Button-->
 <!--        android:layout_width="150dp"-->

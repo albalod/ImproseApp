@@ -19,8 +19,7 @@ class StatsFragment : Fragment(){
         val childFragMan = getChildFragmentManager();
         val childFragTrans = childFragMan.beginTransaction();
         val fragS =  StatsDataFragment(this);
-        childFragTrans.add(R.id.stats_data, fragS);
-        childFragTrans.addToBackStack("GameData");
+        childFragTrans.replace(R.id.stats_data, fragS);
         childFragTrans.commit();
 
         return stats_view;

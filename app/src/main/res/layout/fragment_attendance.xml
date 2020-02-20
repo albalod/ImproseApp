@@ -34,7 +34,7 @@
         android:layout_below="@id/attendance_date_help"
         android:textSize="25sp"
         android:hint="@string/attendance_date_hint"
-        android:inputType="date"/>
+        android:inputType="text"/>
 
     <TextView
         android:id="@+id/attendance_name_help"

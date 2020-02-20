@@ -30,7 +30,7 @@ class BTAdapters(val con : Context, val bf: BluetoothFragment): RecyclerView.Ada
     }
 
     fun add(string: String) {
-        allDevices.add(0, string)
+        allDevices.add(allDevices.size, string)
         notifyItemInserted(0)
     }
 

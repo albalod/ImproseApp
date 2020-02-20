@@ -45,9 +45,10 @@
     <string name="placeholder">Dummy</string>
     <string name="stats_c_position">Position: %s</string>
     <string name="stats_c_activeness">Active?: %s</string>
-    <string name="stats_c_meetings">Meetings been to: %d</string>
+    <string name="stats_c_meetings">Meetings been to: %s</string>
     <string name="stats_c_seen">Last seen: %s</string>
     <string name="stats_c_mostplayed">Most played game: %s</string>
+    <string name="stats_c_username">Username: %s</string>
     <string name="suggestions_help">Got an idea for a game we can play?\nTell us here!</string>
     <string name="suggestions_title">Suggestions</string>
     <string name="suggestions_hint">Write Suggestion here ...</string>

@@ -27,9 +27,11 @@ import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.QuerySnapshot
 import edu.rosehulman.improse.myapplication.Members.ImprovMember
 import edu.rosehulman.rosefire.Rosefire
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.dialog_first_login.*
 import kotlinx.android.synthetic.main.dialog_first_login.view.*
 import kotlinx.android.synthetic.main.nav_header_main.*
+import kotlinx.android.synthetic.main.nav_header_main.view.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -60,6 +62,7 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(setOf(R.id.nav_home, R.id.nav_attendance,
             R.id.nav_meetings, R.id.nav_games, R.id.nav_stats, R.id.nav_connect), drawerLayout)
 
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
@@ -81,6 +84,7 @@ class MainActivity : AppCompatActivity() {
                 }.create().show()
             }
             currentMember = ImprovMember.fromSnapshot(it.documents[0])
+            nav_view.logged_on_as.text = currentMember.name
         }
     }
 
